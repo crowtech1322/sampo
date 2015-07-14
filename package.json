@@ -4,24 +4,31 @@
   "description": "sampo app",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/.bin/mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crowtech1322/sampo.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0+",
   "bugs": {
     "url": "https://github.com/crowtech1322/sampo/issues"
   },
   "homepage": "https://github.com/crowtech1322/sampo#readme",
   "dependencies": {
-    "express": "^4.13.1"
+    "async": "1.3.0",
+    "bluebird": "2.9.33",
+    "body-parser": "1.13.2",
+    "compression": "1.5.1",
+    "create-error": "0.3.1",
+    "express": "4.13.1",
+    "underscore": "1.8.3"
   },
   "devDependencies": {
-    "chai": "^3.0.0",
-    "mocha": "^2.2.5",
-    "superagent": "^1.2.0"
+    "chai": "3.0.0",
+    "mocha": "2.2.5",
+    "superagent": "1.2.0"
   }
 }

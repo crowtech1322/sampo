@@ -1,12 +1,9 @@
 var config = require('./config');
-var express = require('express');
-var app = express();
-var port = config.port;
+var express = require('./web/express');
 
-app.get('/', function (req, res) {
-    res.send('Hello World!');
+process.on('uncaughtException', function (err) {
+    console.error('Uncaught exception!', err);
+    console.error(err.stack);
 });
 
-var server = app.listen(port, function () {
-    console.log('Example app listening at port: ' + port);
-});
+express.init(__dirname, config);
