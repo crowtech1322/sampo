@@ -10,13 +10,16 @@ var init = function (rootDir, config) {
     config = config || require('../config');
 
     app = express();
+    app.set('views', path.join(rootDir, 'private/views'));
+    app.set('view engine', 'jade');
 
     app.disable('x-powered-by');
     app.use(compression());
     app.use(bodyParser.json());
-    app.use(express.static(path.join(rootDir, 'public')));
 
     require('./routes')(app, config);
+
+    app.use(express.static(path.join(rootDir, 'public')));
 
     return new Promise(function (fulfill, reject) {
         app = app.listen(config.port, function (err) {

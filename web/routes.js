@@ -15,9 +15,30 @@ function render(fn) {
 
 module.exports = function (app, config) {
 
-    app.get('/', function(req, res) {
+    app.get('/info', function(req, res) {
         res.json({
             version: config.version
+        });
+    });
+
+    // TODO extract common render method with error handling
+    app.get('/', function(req, res) {
+        res.render('index', {}, function (err, html) {
+            if (err) {
+                console.error(err);
+                res.status(500).json({error: 'Internal Server Error'});
+            }
+            else res.end(html);
+        });
+    });
+
+    app.get('/detail', function(req, res) {
+        res.render('detail', {}, function (err, html) {
+            if (err) {
+                console.error(err);
+                res.status(500).json({error: 'Internal Server Error'});
+            }
+            else res.end(html);
         });
     });
 

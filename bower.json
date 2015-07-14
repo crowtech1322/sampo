@@ -1,0 +1,20 @@
+{
+  "name": "sampo",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/crowtech1322/sampo",
+  "authors": [
+    "crowtech1322"
+  ],
+  "license": "GPL-3.0+",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.5"
+  }
+}
