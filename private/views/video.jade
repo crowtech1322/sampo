@@ -1,0 +1,18 @@
+extends layout
+
+block pageTitle
+    title='Video'
+
+block content
+    .container-fluid
+        .videoWrapper
+            iframe(width="1280" height="720" src="https://www.youtube.com/embed/#{youtubeId}?showinfo=0" frameborder="0" allowfullscreen)
+        p
+            a(href="https://www.youtube.com/watch?v=#{youtubeId}" target="_blank") Video auf Youtube
+
+    .container-fluid
+        a(class="muut" href="https://muut.com/i/ipraven/comments" type="dynamic") ipraven forum
+
+
+
+

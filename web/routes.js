@@ -42,4 +42,17 @@ module.exports = function (app, config) {
         });
     });
 
+    app.get('/yt/:youtubeId', function(req, res) {
+
+        var youtubeId = req.params.youtubeId;
+
+        res.render('video', { youtubeId: youtubeId}, function (err, html) {
+            if (err) {
+                console.error(err);
+                res.status(500).json({error: 'Internal Server Error'});
+            }
+            else res.end(html);
+        });
+    });
+
 };
