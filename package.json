@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha",
+    "test": "node_modules/.bin/mocha && node_modules/.bin/jshint .",
     "start": "node index.js",
     "postinstall": "node_modules/.bin/bower install"
   },
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "chai": "3.0.0",
+    "jshint": "2.8.0",
     "mocha": "2.2.5",
     "superagent": "1.2.0"
   }

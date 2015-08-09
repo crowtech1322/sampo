@@ -1,3 +1,4 @@
+/*
 var BaseError = require('../lib/errors').BaseError;
 
 function render(fn) {
@@ -11,7 +12,7 @@ function render(fn) {
             return res.status(500).json(e);
         });
     };
-}
+}*/
 
 module.exports = function (app, config) {
 
