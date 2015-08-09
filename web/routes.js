@@ -33,6 +33,16 @@ module.exports = function (app, config) {
         });
     });
 
+    app.get('/imprint', function(req, res) {
+        res.render('imprint', {}, function (err, html) {
+            if (err) {
+                console.error(err);
+                res.status(500).json({error: 'Internal Server Error'});
+            }
+            else res.end(html);
+        });
+    });
+
     app.get('/detail', function(req, res) {
         res.render('detail', {}, function (err, html) {
             if (err) {
