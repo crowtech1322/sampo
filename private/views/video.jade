@@ -4,10 +4,11 @@ block pageTitle
     title='Video'
 
 block og
-    meta(property="og:url" content="http://www.ipraven.com/yt/#{youtubeId}")
+    meta(property="og:title" content="video title")
+    meta(property="og:description" content="IpRaven video description. This is a dummy text")
     meta(property="og:image" content="http://img.youtube.com/vi/#{youtubeId}/0.jpg")
-    meta(property="og:title" content="IpRaven video title TODO")
-    meta(property="og:description" content="IpRaven video description TODO")
+    meta(property="og:url" content="http://www.ipraven.com/yt/#{youtubeId}")
+    
 
 block content
     .container-fluid
@@ -25,8 +26,9 @@ block content
         a(class="muut" href="https://muut.com/i/ipraven/comments/#{youtubeId}" type="dynamic") ipraven forum
 
      
-     
+     script(src='/scripts/test.js')
      script(src='//cdn.muut.com/1/moot.min.js')
+
 
 
 
