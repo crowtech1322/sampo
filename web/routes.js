@@ -1,4 +1,3 @@
-var config = require('../config');
 var request = require('superagent');
 var agent = request.agent();
 
@@ -66,7 +65,7 @@ module.exports = function (app, config) {
         agent.get('https://www.googleapis.com/youtube/v3/videos?id=' + youtubeId + '&key=' + ytKey + '&part=snippet&fields=items(snippet)').end(function (err2, res2) {
             
             if (err2) {
-                console.error(err);
+                console.error(err2);
                 return res.status(500).json({error: 'Internal Server Error'});
             }
 
