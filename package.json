@@ -28,12 +28,12 @@
     "create-error": "0.3.1",
     "express": "4.13.1",
     "jade": "1.11.0",
-    "underscore": "1.8.3"
+    "underscore": "1.8.3",
+    "superagent": "1.2.0"
   },
   "devDependencies": {
     "chai": "3.0.0",
     "jshint": "2.8.0",
-    "mocha": "2.2.5",
-    "superagent": "1.2.0"
+    "mocha": "2.2.5"
   }
 }

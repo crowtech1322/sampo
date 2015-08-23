@@ -1,12 +1,13 @@
 extends layout
 
 block pageTitle
-    title='title 1'
+    title=videoTitle
 
 // ziehen die og-Tags nicht weil kein Content außer dem Video auf der Seite ist? Evtl. ipframe API von Youtube zum Embedding einsetzen
 block og
-    meta(property="og:title" content="blubber title")
-    meta(property="og:description" content="IpRavenasd video description. This is a dummy text")
+    meta(property="og:title" content=videoTitle)
+    meta(property="og:type" content="video.movie")
+    meta(property="og:description" content=videoDescription)
     meta(property="og:image" content="http://img.youtube.com/vi/#{youtubeId}/0.jpg")
     meta(property="og:url" content="http://www.ipraven.com/yt/#{youtubeId}")
     

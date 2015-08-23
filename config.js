@@ -6,6 +6,7 @@ var config = {
     version: pjson.version,
 
     port: env.PORT || 8080,
+    youtubeApiKey: env.YOUTUPE_API_KEY
 };
 
 module.exports = config;
